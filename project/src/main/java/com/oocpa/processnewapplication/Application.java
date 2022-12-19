@@ -28,8 +28,28 @@ public class Application implements java.io.Serializable {
 			javax.persistence.CascadeType.REFRESH})
 	private com.oocpa.processnewapplication.Provider provider;
 
+	@javax.persistence.ManyToOne(optional = false, fetch = javax.persistence.FetchType.EAGER, cascade = {
+		javax.persistence.CascadeType.PERSIST,
+		javax.persistence.CascadeType.MERGE,
+		javax.persistence.CascadeType.REMOVE,
+		javax.persistence.CascadeType.REFRESH})
+	private java.util.List<com.oocpa.processnewapplication.ValidationMessage> validationResult;
+
+
 	public Application() {
 	}
+
+
+	public Application(long id,
+			com.oocpa.processnewapplication.Patient patient,
+			com.oocpa.processnewapplication.Provider provider,
+			java.util.List<com.oocpa.processnewapplication.ValidationMessage> result) {
+		this.id = id;
+		this.patient = patient;
+		this.provider = provider;
+		this.validationResult = result;
+	}
+
 
 	public long getId() {
 		return this.id;
@@ -55,12 +75,13 @@ public class Application implements java.io.Serializable {
 		this.provider = provider;
 	}
 
-	public Application(long id,
-			com.oocpa.processnewapplication.Patient patient,
-			com.oocpa.processnewapplication.Provider provider) {
-		this.id = id;
-		this.patient = patient;
-		this.provider = provider;
+	public java.util.List<com.oocpa.processnewapplication.ValidationMessage> getValidationResult() {
+		return this.validationResult;
 	}
+
+	public void setProvider(java.util.List<com.oocpa.processnewapplication.ValidationMessage> result) {
+		this.validationResult = result;
+	}
+
 
 }

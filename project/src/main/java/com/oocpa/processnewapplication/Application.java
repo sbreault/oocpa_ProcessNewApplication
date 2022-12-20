@@ -12,7 +12,7 @@ public class Application implements java.io.Serializable {
 
 	@javax.persistence.GeneratedValue(generator = "APPLICATION_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
 	@javax.persistence.Id
-	private long id;
+	private java.lang.Long id;
 
 	@javax.persistence.ManyToOne(optional = false, fetch = javax.persistence.FetchType.EAGER, cascade = {
 			javax.persistence.CascadeType.PERSIST,
@@ -40,7 +40,7 @@ public class Application implements java.io.Serializable {
 	}
 
 
-	public Application(long id,
+	public Application(java.lang.Long id,
 			com.oocpa.processnewapplication.Patient patient,
 			com.oocpa.processnewapplication.Provider provider,
 			java.util.List<com.oocpa.processnewapplication.ValidationMessage> result) {
@@ -51,11 +51,11 @@ public class Application implements java.io.Serializable {
 	}
 
 
-	public long getId() {
+	public java.lang.Long getId() {
 		return this.id;
 	}
 
-	public void setId(long id) {
+	public void setId(java.lang.Long id) {
 		this.id = id;
 	}
 

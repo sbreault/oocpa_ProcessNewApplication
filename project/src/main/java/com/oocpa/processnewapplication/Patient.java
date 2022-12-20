@@ -14,9 +14,9 @@ public class Patient
 
 	@javax.persistence.GeneratedValue(generator = "PATIENT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
 	@javax.persistence.Id
-	private long id;
+	private java.lang.Long id;
 
-	private long healthNum;
+	private java.lang.Long healthNum;
 
 	private java.lang.String firstName;
 
@@ -25,19 +25,19 @@ public class Patient
 	public Patient() {
 	}
 
-	public long getId() {
+	public java.lang.Long getId() {
 		return this.id;
 	}
 
-	public void setId(long id) {
+	public void setId(java.lang.Long id) {
 		this.id = id;
 	}
 
-	public long getHealthNum() {
+	public java.lang.Long getHealthNum() {
 		return this.healthNum;
 	}
 
-	public void setHealthNum(long healthNum) {
+	public void setHealthNum(java.lang.Long healthNum) {
 		this.healthNum = healthNum;
 	}
 
@@ -57,7 +57,7 @@ public class Patient
 		this.lastName = lastName;
 	}
 
-	public Patient(long id, long healthNum,
+	public Patient(java.lang.Long id, java.lang.Long healthNum,
 			java.lang.String firstName, java.lang.String lastName) {
 		this.id = id;
 		this.healthNum = healthNum;

@@ -14,7 +14,7 @@ public class Provider
 
 	@javax.persistence.GeneratedValue(generator = "PROVIDER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
 	@javax.persistence.Id
-	private long id;
+	private java.lang.Long id;
 
 	private java.lang.String claimSubNum;
 
@@ -25,11 +25,11 @@ public class Provider
 	public Provider() {
 	}
 
-	public long getId() {
+	public java.lang.Long getId() {
 		return this.id;
 	}
 
-	public void setId(long id) {
+	public void setId(java.lang.Long id) {
 		this.id = id;
 	}
 
@@ -57,7 +57,7 @@ public class Provider
 		this.lastName = lastName;
 	}
 
-	public Provider(long id, java.lang.String claimSubNum,
+	public Provider(java.lang.Long id, java.lang.String claimSubNum,
 			java.lang.String firstName, java.lang.String lastName) {
 		this.id = id;
 		this.claimSubNum = claimSubNum;
